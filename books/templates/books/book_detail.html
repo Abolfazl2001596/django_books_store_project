@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block page_titel %}لیست کتاب ها{% endblock page_titel %}
+{% block content %}
+    <h1>{{ book.title }}</h1>
+    <P>{{ book.description }}</P>
+    <P>{{ book.author }}</P>
+    <p>{{ book.price }}</p>
+    <a href="{% url 'book_update' book.id %}"><input type="submit" class="btn btn-success" value="ویرایش"><a/>
+    </form>
+{% endblock content %}

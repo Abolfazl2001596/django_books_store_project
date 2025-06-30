@@ -1,0 +1,10 @@
+{% extends '_base.html' %}
+
+{% block page_titel %}لیست کتاب ها{% endblock page_titel %}
+{% block content %}
+    {% for book in books %}
+        <a href="{{ book.get_absolute_url }}">{{ book.title }}</a>
+        <p>{{ book.description }}</p>
+        <br>
+    {% endfor %}
+{% endblock content %}

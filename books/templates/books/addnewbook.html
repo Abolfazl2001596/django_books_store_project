@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+{%  block page_titel %}اضافه کردن کتاب جدید{% endblock page_titel %}
+{% block content %}
+    <h1>Newbook</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value="ایجاد">
+    </form>
+{% endblock content %}
