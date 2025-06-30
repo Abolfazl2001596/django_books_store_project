@@ -6,6 +6,9 @@
     <P>{{ book.description }}</P>
     <P>{{ book.author }}</P>
     <p>{{ book.price }}</p>
-    <a href="{% url 'book_update' book.id %}"><input type="submit" class="btn btn-success" value="ویرایش"><a/>
+    <a href="{% url 'book_update' book.id %}"><input type="submit" class="btn btn-info" value="ویرایش"><a/>
+        <a href="{% url 'book_delete' book.id %}"><input type="submit" class="btn btn-danger" value="حذف"><a/>
     </form>
+            <br>
+            <a href="{% url 'book_list' %}">لیست کتاب ها</a>
 {% endblock content %}
